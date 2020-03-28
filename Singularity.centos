@@ -74,8 +74,15 @@ bash -c "source activate neuro
 rm -rf ~/.cache/pip/*
 sync
 
+yum install -y git
 
-git clone https://github.com/braindynamicslab/dyneusr.git && cd dyneusr && pip install --no-cache-dir -r requirements.txt && pip install --no-cache-dir -e . && pytest
+git clone https://github.com/braindynamicslab/dyneusr.git
+sync
+cd dyneusr
+pip install --no-cache-dir -r requirements.txt
+pip install --no-cache-dir -e .
+pytest
+sync
 
 yum install -y None \
     emacs
