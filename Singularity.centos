@@ -61,7 +61,8 @@ conda install -y -q --name neuro \
     "joblib" \
     "nibabel" \
     "datalad" \
-    "jupyter"
+    "jupyter" \
+    "git" 
 sync && conda clean -y --all && sync
 bash -c "source activate neuro
   pip install --no-cache-dir  \
@@ -73,8 +74,6 @@ bash -c "source activate neuro
       "kmapper""
 rm -rf ~/.cache/pip/*
 sync
-
-yum install -y git
 
 git clone https://github.com/braindynamicslab/dyneusr.git
 sync
