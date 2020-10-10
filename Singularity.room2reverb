@@ -77,7 +77,7 @@ conda install -y -q --name base \
     "keras"
 sync && conda clean -y --all && sync
 bash -c "source activate base
-  pip install llvmlite --ignore installed
+  pip install llvmlite --ignore-installed
   pip install --no-cache-dir  \
       "essentia" \
       "magenta""
