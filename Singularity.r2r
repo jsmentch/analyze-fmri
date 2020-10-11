@@ -1,0 +1,7 @@
+Bootstrap: docker
+
+From: hammertoe/librosa_ml
+
+pip install magenta
+pip pinstall ipython
+pip install jupyter-lab
