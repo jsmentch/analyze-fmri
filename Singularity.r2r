@@ -1,9 +1,17 @@
 Bootstrap: docker
 From: pytorch/pytorch
+%files
 
 %post
-su root
-apt-get update
-apt-get install python3-pip
-pip3 install --upgrade pip
-pip3 install --no-cache-dir "dominate"
+    conda install -c conda-forge dominate
+    #apt-get update -y
+    #apt-get install -y -q \
+    #       python3-pip
+    #apt-get clean
+    #apt-get install -y --no-install-recommends \
+    #    gcc
+    #pip install psutil
+    #/opt/conda/bin/conda env create -f facenet_environment.yml
+    #pip3 install dominate
+%runscript
+    #exec /opt/conda/envs/$(head -n 1 facenet_environment.yml | cut -f 2 -d ' ')/bin/"$@"
