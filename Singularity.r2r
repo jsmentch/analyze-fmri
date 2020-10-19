@@ -2,6 +2,6 @@ Bootstrap: docker
 From: pytorch/pytorch
 
 %post
-    pip install --no-cache-dir dominate
-    pip install --no-cache-dir ipython
-    pip install --no-cache-dir jupyter-lab
+    pip3 install --no-cache-dir dominate
+    pip3 install --no-cache-dir ipython
+    pip3 install --no-cache-dir jupyter-lab
