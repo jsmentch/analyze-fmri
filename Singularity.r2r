@@ -2,5 +2,4 @@ Bootstrap: docker
 From: pytorch/pytorch
 
 %post
-su - root
-pip install --no-cache-dir "dominate"
+sudo pip3 install --no-cache-dir "dominate"
