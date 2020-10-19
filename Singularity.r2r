@@ -1,7 +1,7 @@
 Bootstrap: docker
 
-From: hammertoe/librosa_ml
+From: pytorch/pytorch
 
-pip install magenta
-pip pinstall ipython
+pip install dominate
+pip install ipython
 pip install jupyter-lab
