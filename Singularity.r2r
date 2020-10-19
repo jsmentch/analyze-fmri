@@ -3,10 +3,4 @@ From: pytorch/pytorch
 
 %post
 su - root
-
-apt-get update -qq
-apt-get install -y -q --no-install-recommends python3-pip
-apt-get clean
-pip3 install --no-cache-dir "dominate"
-pip3 install --no-cache-dir "ipython"
-pip3 install --no-cache-dir "jupyter-lab"
+pip install --no-cache-dir "dominate"
