@@ -3,7 +3,10 @@ From: pytorch/pytorch
 %files
 
 %post
-    conda install -c conda-forge dominate
+    conda install --yes -c conda-forge dominate
+    conda install --yes -c pytorch torchaudio
+    conda install --yes -c pytorch torchvision
+    conda install --yes -c conda-forge matplotlib
     #apt-get update -y
     #apt-get install -y -q \
     #       python3-pip
