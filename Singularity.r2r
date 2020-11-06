@@ -16,5 +16,6 @@ From: pytorch/pytorch
     #pip install psutil
     #/opt/conda/bin/conda env create -f facenet_environment.yml
     #pip3 install dominate
+
 %runscript
     #exec /opt/conda/envs/$(head -n 1 facenet_environment.yml | cut -f 2 -d ' ')/bin/"$@"
