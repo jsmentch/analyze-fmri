@@ -1,9 +1,9 @@
 Bootstrap: docker
-From: pytorch/pytorch
+From: pytorch/pytorch:latest
 %files
 
 %post
-    su - root
+    su -
     conda install --yes -c conda-forge dominate
     conda install --yes -c pytorch torchaudio
     conda install --yes -c pytorch torchvision
