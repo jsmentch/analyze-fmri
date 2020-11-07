@@ -1,22 +1,10 @@
 Bootstrap: docker
-From: pytorch/pytorch:latest
-%files
+From: pytorch/pytorch
 
 %post
-    su -
+    conda uninstall cudatoolkit
+    conda install --yes -c pytorch cudatoolkit=10.1
     conda install --yes -c conda-forge dominate
     conda install --yes -c pytorch torchaudio
     conda install --yes -c pytorch torchvision
     conda install --yes -c conda-forge matplotlib
-    #apt-get update -y
-    #apt-get install -y -q \
-    #       python3-pip
-    #apt-get clean
-    #apt-get install -y --no-install-recommends \
-    #    gcc
-    #pip install psutil
-    #/opt/conda/bin/conda env create -f facenet_environment.yml
-    #pip3 install dominate
-
-%runscript
-    #exec /opt/conda/envs/$(head -n 1 facenet_environment.yml | cut -f 2 -d ' ')/bin/"$@"
