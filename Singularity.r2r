@@ -3,6 +3,7 @@ From: pytorch/pytorch
 %files
 
 %post
+    su - root
     conda install --yes -c conda-forge dominate
     conda install --yes -c pytorch torchaudio
     conda install --yes -c pytorch torchvision
